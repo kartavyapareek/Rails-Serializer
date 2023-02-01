@@ -12,12 +12,12 @@ module Api
                  :created_at,
                  :updated_at
 
-      belongs_to :company,  serializer: API::V1::CompanySerializer
-      has_one    :customer, serializer: API::V1::CustomerSerializer
-      has_many   :products, serializer: API::V1::ProductSerializer
+      belongs_to :company,  serializer: Api::V1::CompanySerializer
+      has_one    :customer, serializer: Api::V1::CustomerSerializer
+      has_many   :products, serializer: Api::V1::ProductSerializer
 
       def notes
-        @object.notes || 'No Notes Found'
+        @object.notes.presence
       end
     end
   end
