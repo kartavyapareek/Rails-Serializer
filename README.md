@@ -9,7 +9,7 @@ $ bundle install
 ```
 Step 3. Run below command to run specs
 ```bash
-$ Rspec
+$ Rspec spec
 ```
 
 # Documentation
