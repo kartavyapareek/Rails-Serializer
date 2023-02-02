@@ -13,10 +13,13 @@ module Base
         association_hash
       end
 
+      # setting up the hash for assocations and returing back the hash
       def set_hash(association_hash) # rubocop:disable Naming/AccessorMethodName
         create_association_hash(self.class.to_s.split('::').last.underscore, association_hash)
       end
 
+      # to get the json hash with the help of association_hash 
+      # and value from the object. 
       def get_hash(association_hash, object) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
         result_hash = {}
         association_hash&.each do |key, value|
@@ -39,6 +42,8 @@ module Base
       end
     end
 
+    # diffrent association classes to define the specific characteristics
+    # for now we dont have this but we are using the class name in the set_hash method above.
     class BelongsTo < Config
     end
 
