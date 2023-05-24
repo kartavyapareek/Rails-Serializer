@@ -1,4 +1,4 @@
-# TGM
+# Rails Serializer
 Its a very simple JSON serializer. 
 ## Installation
 Step 1. Pull the github repo
